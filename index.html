@@ -66,6 +66,7 @@
                 <div class="group-benefit__description">
                     <div class="image_container">
                         <img src="./img/Macbook2.png" alt="img-laptop" class="group-benefit__description__img" />
+                        <div class="line-red"></div>
                     </div>
                     <h4 class="group-benefit__title">Be always first</h4>
                     <p class="group-benefit__description__p">
@@ -78,6 +79,7 @@
             <div class="group-benefit__content">
                 <div class="group-benefit__description">
                     <img src="./img/iphone2.png" alt="img-iphone" class="group-benefit__description__img" />
+                    <div class="line-blue"></div>
                     <h4 class="group-benefit__title">Your shop is where you are!</h4>
                     <p class="group-benefit__description__p">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -97,6 +99,7 @@
                         enim ad minim veniam.
                     </p>
                 </div>
+                <div class="line-green"></div>
                 <div class="image-container">
                     <img src="./img/Trumpeeet.png" alt="img-trumpeet" class="img-3" />
                 </div>
@@ -238,39 +241,53 @@
             </div>
             </div>
         </section>
-        <section class="contact" id="contact">
-            <h2 class="contact__title">Any questions?</h2>
-            <p class="contact__p">Leave your email address or call us!</p>
-            <address class="contact__address">
-                <div class="contact__address__container">
-                    <img src="./img/envelope-regular.svg" alt="icon-mail" class="contact__address__container__icons" />
-                    <a href="mailto:info@bestshop.xyz"> info@bestshop.xyz </a>
-                </div>
-                <div class="contact__address__container">
-                    <img src="./img/phone.png" alt="icon-phone" class="contact__address__container__icons" />
-                    <a href="tel:123456789">123 456 789</a>
-                </div>
-            </address>
-            <form action="" class="contact__form">
-                <label for="name">NAME</label>
-                <input type="text" name="name" id="name" />
-                <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email" />
-                <div class="contact__form__policy">
-                    <input type="checkbox" name="policy" id="checkbox" />
-                    <label for="policy" id="policy">
-                        I hereby give consent for my personal data included in my
-                        application to be processed for the purposes of the recruitment
-                        process under the European Parliament’s and Council of the
-                        European Union Regulation on the Protection of Natural Persons as
-                        of 27 April 2016, with regard to the processing of personal data
-                        and on the free movement of such data, and repealing Directive
-                        95/46/EC (Data Protection Directive)
-                    </label>
-                </div>
-                <button>Send</button>
-            </form>
-        </section>
+        <section class="contact_container" id="contact">
+		<div class="header">
+			<div class="title">
+				<h2>Any questions?</h2>
+				<p class="title_p">Leave your email address or call us!</p>
+			</div>
+			<div class="contact_info">
+				<p>
+					<i class="fa fa-light fa-envelope"></i>
+					info@bestshop.xyz
+				</p>
+				<p>
+					<i class="fa fa-light fa-phone"></i>
+					123 456 789
+				</p>
+			</div>
+		</div>
+		<div class="form_container">
+			<form class="form">
+				<div>
+					<label for="name" class="label">NAME</label><br>
+					<input class="input_text name" name="name" type="text"><br>
+					<p class="error_message_input error_message_name">Mínimo 2 caracteres, solo letras y números.</p>
+				</div>
+				<div>
+					<label for="email" class="label">EMAIL</label><br>
+					<input class="input_text email" name="email" type="email"><br>
+					<p class="error_message_input error_message_email">Introduzca un email válido</p>
+				</div>
+				<div class="policy">
+					<input type="checkbox" class="checkbox">
+					<label class="policy_label">I here by give consent for my personal data included in my application to
+						be processed for the
+						purposes of the recruitment process under the European Parliament’s and Council of the European
+						Union
+						Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the
+						processing of
+						personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data
+						Protection
+						Directive)</label><br>
+				</div>
+				<div class="submit_container">
+					<button type="submit" class="submit_button">Send</button>
+				</div>
+			</form>
+		</div>
+	</section>
     </main>
     <footer class="footer">
         <div class="footer__title">

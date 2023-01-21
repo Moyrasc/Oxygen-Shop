@@ -580,86 +580,137 @@ h4 {
   background-position: center;
 }
 
-.contact {
-  padding: 0 30px 0 30px;
-  max-width: 100%;
-  background: #FFFFFF;
+.contact_container {
+  padding-left: 20px;
+  margin-top: 50px;
 }
-.contact__title {
-  font-family: Raleway, sans-serif;
-  font-weight: 400;
-  line-height: 47px;
-}
-.contact__p {
-  font-family: Open Sans, sans-serif;
-  font-weight: 400;
-  line-height: 22px;
-  color: #000000;
-}
-.contact__address {
-  margin-top: 38px;
-  margin-bottom: 56px;
-}
-.contact__address__container {
-  display: flex;
-  align-content: center;
-}
-.contact__address__container img {
-  margin-right: 11px;
-  width: 20px;
-  height: 20px;
-}
-.contact__address a {
-  font-family: Open Sans, sans-serif;
-  font-weight: 600;
+.contact_container .header {
   font-size: 16px;
-  line-height: 22px;
-  color: #a5a5a5;
 }
-.contact__form label {
+.contact_container .header .title h2 {
+  font-family: Raleway, sans-serif;
+  font-size: 40px;
+  padding-right: 0.4em;
+  text-align: start;
+}
+.contact_container .header .title_p {
   font-family: Open Sans, sans-serif;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 15px;
+}
+.contact_container .header .contact_info {
+  font-family: Open Sans, sans-serif;
+  color: #a5a5a5;
+  margin: 30px 0;
+}
+.contact_container .header .contact_info p {
+  margin: 10px 0;
+}
+.contact_container .header .contact_info p i {
   color: #08A6E4;
 }
-.contact__form input {
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.contact_container .header .contact_info p .fa-phone {
+  transform: rotate(90deg);
+}
+.contact_container .form_container {
+  margin: 40px 0;
+  max-width: 600px;
+}
+.contact_container .form_container .label {
+  font-family: Open Sans, sans-serif;
+  color: #08A6E4;
+  font-size: 11px;
+}
+.contact_container .form_container .input_text {
+  width: 95%;
   border: none;
   border-bottom: 1px solid #a5a5a5;
+  margin-top: 10px;
+  height: 30px;
+  padding: 5px;
 }
-.contact__form__policy {
-  margin-top: 31px;
+.contact_container .form_container .input_text:focus-visible {
+  outline: none;
+}
+.contact_container .form_container .error_message_input {
+  visibility: hidden;
+  font-family: Open Sans, sans-serif;
+  font-size: 12px;
+  width: 95%;
+  text-align: end;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  color: #FB3B64;
+}
+.contact_container .form_container .error {
+  border: 2px solid #FB3B64;
+  border-radius: 10px;
+}
+.contact_container .form_container .correct {
+  border-bottom: 2px solid #55DFB4;
+}
+.contact_container .form_container .policy {
+  margin: 20px 20px 20px 0;
   display: flex;
 }
-.contact__form__policy #policy {
+.contact_container .form_container .policy .checkbox {
+  margin-top: 5px;
+  margin-right: 10px;
+  padding-top: 5px;
+  align-self: flex-start;
+}
+.contact_container .form_container .policy label {
   font-family: Open Sans, sans-serif;
-  font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
-  color: #a5a5a5;
+  color: #707070;
 }
-.contact__form__policy input[type=checkbox] {
-  transform: scale(0.7);
-  -webkit-transform: scale(0.7);
-  -moz-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  -o-transform: scale(0.7);
+.contact_container .form_container .policy .not_checked {
+  color: #FB3B64;
 }
-.contact__form button {
-  border: none;
-  color: #ffffff;
-  margin-top: 31px;
-  display: block;
-  margin-left: auto;
-  padding: 15px 97px;
-  background: #08A6E4;
+.contact_container .form_container .submit_container {
+  display: flex;
+  justify-content: end;
+  max-width: 600px;
+  margin-right: 20px;
+}
+.contact_container .form_container .submit_container .submit_button {
+  background-color: #08A6E4;
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
   border-radius: 35px;
+  border: none;
+  color: #FFFFFF;
+  width: 226px;
+  height: 57px;
 }
 
+@media only screen and (min-width: 1000px) {
+  .contact_container {
+    display: flex;
+    justify-content: center;
+  }
+  .contact_container .header {
+    width: 30%;
+  }
+  .contact_container .title h2 {
+    padding-right: 7.1rem;
+  }
+  .contact_container .form_container {
+    margin-top: 0;
+    width: 40%;
+  }
+  .contact_container .form_container .input_text {
+    margin-bottom: 5px;
+  }
+  .contact_container .form_container .error_message_input {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+  .contact_container {
+    margin-left: 25%;
+  }
+  .contact_container .form_container {
+    width: 70%;
+  }
+}
 .footer {
   display: flex;
   margin-top: 2rem;
