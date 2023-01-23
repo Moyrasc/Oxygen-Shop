@@ -859,6 +859,22 @@ h4 {
     width: 70%;
   }
 }
+#btn-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #08A6E4;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+
 .footer {
   display: flex;
   margin-top: 2rem;

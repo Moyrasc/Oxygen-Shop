@@ -20,3 +20,22 @@ let scrollPercentage = Math.round(((window.scrollY)/ (document.body.offsetHeight
 
 percentageScroller.style.width = scrollPercentage + "%";
 })
+
+// Return to the top
+const buttonTop = document.querySelector('#btn-top');
+window.onscroll = () =>scrollFunction()
+const scrollFunction = () =>{
+    if(document.body.scrollTop > 5 || document.documentElement.scrollTop > 5){
+        buttonTop.style.display = "block"
+    }else {
+        buttonTop.style.display = "none"
+    }
+}
+buttonTop.addEventListener('click',()=>{
+    setTimeout(() => {
+    window.scroll({
+        top:0,
+        behavior: "smooth",
+    })
+}, 200)
+})
