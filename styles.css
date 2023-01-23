@@ -55,6 +55,19 @@ h4 {
   color: #000000;
 }
 
+.percentage-scroller {
+  position: fixed;
+  top: 0;
+  background-color: #08A6E4;
+  z-index: 999;
+  height: 5px;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+}
+
 .header-container {
   display: block;
   background: #FFFFFF;

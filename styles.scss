@@ -58,6 +58,18 @@ h4{
     line-height: 35px;
     color: #{$black};
 }
+.percentage-scroller{
+    position: fixed;
+    top: 0;
+    background-color: #{$primary};
+    z-index: 999;
+    height: 5px;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+}
 .header-container {
     display: block;
     background: #FFFFFF;

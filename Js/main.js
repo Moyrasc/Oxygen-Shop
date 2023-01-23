@@ -13,3 +13,10 @@ headerIcons.forEach(item => {
     })
 })
 
+//percentage scroller
+const percentageScroller = document.querySelector('.percentage-scroller')
+window.addEventListener("scroll", () =>{
+let scrollPercentage = Math.round(((window.scrollY)/ (document.body.offsetHeight - window.innerHeight))* 100);
+
+percentageScroller.style.width = scrollPercentage + "%";
+})
