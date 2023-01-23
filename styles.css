@@ -230,40 +230,51 @@ h4 {
     justify-content: space-evenly;
   }
 }
-.group-benefit {
-  background: #F7F7F7;
+.benefits_container {
+  background-color: #F7F7F7;
   padding: 10px;
   display: flex;
   flex-direction: column;
   margin-top: 6rem;
 }
-.group-benefit__content {
+.benefits_container .card_benefit {
   margin: 30px 20px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
+  align-self: center;
 }
-.group-benefit__description {
+.benefits_container .card_benefit .images_container {
+  display: flex;
+  position: relative;
+  width: 20rem;
+  margin: 30px auto;
+  justify-content: center;
+}
+.benefits_container .card_benefit .images_container .main {
+  width: 15rem;
+  z-index: 1;
+  margin-top: 10%;
+}
+.benefits_container .card_benefit .card_description {
   margin: 20px;
 }
-.group-benefit__description__title {
+.benefits_container .card_benefit .card_description .title {
+  font-family: Raleway, sans-serif;
   margin: 10px;
   line-height: 35px;
 }
-.group-benefit__description__p {
+.benefits_container .card_benefit .card_description .text {
+  font-family: Open Sans, sans-serif;
   margin: 40px 10px 20px 10px;
   line-height: 21px;
-  font-family: Open Sans, sans-serif;
 }
-.group-benefit__description__img {
-  width: 100%;
-  max-width: 30rem;
-  height: 10rem;
-  margin: 0 auto 0 auto;
-  justify-content: center;
+.benefits_container .card_benefit .card_description .bottom_line_red,
+.benefits_container .card_benefit .card_description .bottom_line_blue,
+.benefits_container .card_benefit .card_description .bottom_line_green {
+  display: none;
 }
-
-.image-container {
+.benefits_container #card_3 .images_container {
   display: flex;
   position: relative;
   width: 100%;
@@ -272,12 +283,136 @@ h4 {
   margin: 0 auto 0 auto;
   justify-content: center;
 }
-
-.img-3 {
+.benefits_container #card_3 .images_container .main {
   margin: 50px 30px 30px 30px;
   position: absolute;
 }
+.benefits_container #card_3 .images_container .background_green {
+  background: #55DFB4;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  display: block;
+  min-width: 70%;
+}
 
+@media only screen and (min-width: 1000px) {
+  .benefits_container {
+    display: flex;
+    justify-content: center;
+  }
+  .card_benefit {
+    width: 55%;
+  }
+  #card_1 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #card_1 .images_container .main {
+    width: 100vw;
+  }
+  #card_1 .card_description {
+    width: 30%;
+  }
+  #card_1 .card_description .bottom_line_red {
+    display: block;
+    width: 70%;
+    background-color: #FB3B64;
+    height: 2px;
+    margin-left: 10px;
+    border: none;
+  }
+  #card_2 {
+    display: flex;
+    flex-direction: row;
+  }
+  #card_2 .images_container {
+    margin-left: 10px;
+  }
+  #card_2 .images_container .main {
+    width: 100vw;
+  }
+  #card_2 .images_container .background_blue {
+    height: 80%;
+  }
+  #card_2 .card_description {
+    width: 50%;
+    align-self: center;
+    margin: 30px 0;
+  }
+  #card_2 .card_description .bottom_line_blue {
+    display: block;
+    width: 75%;
+    background-color: #08A6E4;
+    height: 2px;
+    margin-left: 10px;
+    margin-top: 50px;
+    border: none;
+  }
+  #card_3 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #F7F7F7;
+    border: none;
+  }
+  #card_3 .card_description {
+    width: 40rem;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+  }
+  #card_3 .card_description .text {
+    margin-top: 2%;
+    margin-bottom: 0;
+  }
+  #card_3 .card_description .bottom_line_green {
+    display: block;
+    width: 70%;
+    background-color: #55DFB4;
+    height: 2px;
+    margin-left: 10px;
+    margin-top: 5%;
+    border: none;
+  }
+  #card_3 .images_container {
+    height: 15rem;
+  }
+  #card_3 .images_container .background_green {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .images_container {
+    width: 100%;
+  }
+  .images_container .background_red {
+    width: 40%;
+    left: 5rem;
+  }
+}
+@media only screen and (max-width: 460px) {
+  #card_3 .images_container .background_green {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .images_container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .images_container .main {
+    margin: 10px;
+  }
+  .images_container .background_red {
+    width: 3rem;
+    height: 3rem;
+  }
+  .images_container .background_blue {
+    height: 80%;
+  }
+}
 .price-container {
   padding: 51px 24px 36px 24px;
   display: block;
