@@ -923,8 +923,8 @@ h4 {
   }
 }
 .modal {
-  display: block;
   position: fixed;
+  display: none;
   top: 0;
   left: 0;
   width: 100vw;

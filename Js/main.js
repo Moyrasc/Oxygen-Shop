@@ -101,3 +101,39 @@ form.addEventListener('submit', (e)=>{
     }else policy.classList.add("not_checked")
 
 })
+// modal
+const modalContainer = document.querySelector('.modal');
+const modalClose = document.querySelector('.modal__close')
+
+const modalActive = true
+setTimeout(()=>{
+    if(localStorage.getItem('modalActive')!== '1'){
+        modalContainer.style.display = "block";
+        localStorage.setItem('modalActive','1')
+    }
+},5000)
+
+const showModal = () =>{
+modalActive = false
+}
+document.addEventListener("ev",showModal)
+document.addEventListener("scroll", ()=> {
+    if (localStorage.getItem("modalActive") !== "1" && (scrollY/(document.body.offsetHeight - innerHeight))*100 >= 25) {
+    modalContainer.style.display = "block";
+    localStorage.setItem("modalActive", "1");
+    }
+})
+modalClose.addEventListener("click",()=>{
+    modalContainer.style.display = "none";
+})
+modalContainer.addEventListener("click", (e)=>{
+    if(e.target === e.currentTarget){
+        modalContainer.style.display = " none";
+        
+    }
+})
+window.addEventListener("keyup", (e)=>{
+    if(e.key=== "Escape"){
+        modalContainer.style.display = "none";
+    }
+})
