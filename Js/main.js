@@ -152,3 +152,37 @@ btnSubmit.addEventListener("click",()=>{
     }
 
 })
+// currency exchange
+
+const basicPrice = document.querySelector('#basic-price')
+const professionalPrice = document.querySelector('#professional-price')
+const premiumPrice = document.querySelector('#premium-price')
+const selectPricing = document.querySelector('.select__pricing')
+const URL_EXCHANGE = 'https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json'
+
+const getCurrency = async (url, currency) => {
+    const response = await fetch(url);
+    const data = await response.json()
+    console.log(data)
+    if(currency ==="usd"){
+        const currencyExchangeUsd = (data.usd.usd).toFixed(2)
+        basicPrice.innerText = `$ ${0}`
+        professionalPrice.innerText = `$ ${25 * currencyExchangeUsd}`
+        premiumPrice.innerText = `$ ${60 * currencyExchangeUsd}`
+        return currencyExchangeUsd
+    }else if(currency === "eur"){
+        const currencyExchangeEur = (data.usd.eur).toFixed(2)
+        basicPrice.innerText = `€ ${0}`
+        professionalPrice.innerText = `€ ${25 * currencyExchangeEur}`
+        premiumPrice.innerText = `€ ${60 * currencyExchangeEur}`
+        return currencyExchangeEur
+    }else if(currency === "gbp"){
+        const currencyExchangeGbp = (data.usd.gbp).toFixed(2)
+        basicPrice.innerText = `£ ${0}`
+        professionalPrice.innerText = `£ ${25 * currencyExchangeGbp}`
+        premiumPrice.innerText = `£ ${60 * currencyExchangeGbp}`
+        return currencyExchangeGbp
+    }
+}
+
+selectPricing.addEventListener("change", () => getCurrency(URL_EXCHANGE, selectPricing.value))
