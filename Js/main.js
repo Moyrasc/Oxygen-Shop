@@ -12,7 +12,6 @@ headerIcons.forEach(item => {
 
     })
 })
-
 //percentage scroller
 const percentageScroller = document.querySelector('.percentage-scroller')
 window.addEventListener("scroll", () => {
@@ -20,7 +19,6 @@ window.addEventListener("scroll", () => {
 
     percentageScroller.style.width = scrollPercentage + "%";
 })
-
 // Return to the top
 const buttonTop = document.querySelector('#btn-top');
 window.onscroll = () => scrollFunction()
@@ -53,7 +51,6 @@ const URL_FORM = "https://jsonplaceholder.typicode.com/posts"
 
 const validateName = () => {
     const regexName = /[a-zA-Z]{2,100}/
-
     if (regexName.test(nameForm.value)) {
         errorName.style.visibility = "hidden";
         nameForm.classList.remove('error')
@@ -63,7 +60,6 @@ const validateName = () => {
         nameForm.classList.remove('error')
         nameForm.classList.add("correct")
     }
-
 }
 const validateEmail = () => {
     const regexMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
