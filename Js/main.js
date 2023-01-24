@@ -104,6 +104,10 @@ form.addEventListener('submit', (e)=>{
 // modal
 const modalContainer = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close')
+const btnSubmit = document.querySelector('.modal__btn')
+const emailModal = document.querySelector('.modal__input')
+const errorEmailModal = document.querySelector('.error_message_email_modal');
+const regexMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 const modalActive = true
 setTimeout(()=>{
@@ -136,4 +140,15 @@ window.addEventListener("keyup", (e)=>{
     if(e.key=== "Escape"){
         modalContainer.style.display = "none";
     }
+})
+btnSubmit.addEventListener("click",()=>{
+    if(regexMail.test(emailModal.value)){
+        sendForm(emailModal,"",URL_FORM)
+        modalContainer.style.display = "none";
+    }else {
+        errorEmailModal.style.visibility = "visible";
+        emailModal.classList.remove('error')
+        emailModal.classList.add("correct")
+    }
+
 })

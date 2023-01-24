@@ -959,9 +959,15 @@ h4 {
   color: #000000;
   padding: 0.5rem 0;
 }
+.modal__form {
+  padding: 0.5rem 0;
+}
 .modal__input {
   border: none;
   border-bottom: 1px solid #a5a5a5;
+}
+.modal__label {
+  font-family: Open Sans, sans-serif;
 }
 .modal__close {
   font-family: Open Sans, sans-serif;
@@ -983,10 +989,15 @@ h4 {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  cursor: pointer;
 }
-
-.modal-visible {
-  visibility: visible;
+.modal .error_message_input {
+  visibility: hidden;
+  font-family: Open Sans, sans-serif;
+  font-size: 12px;
+  width: 95%;
+  margin-top: 15px;
+  color: #FB3B64;
 }
 
 /*# sourceMappingURL=styles.css.map */
