@@ -1070,4 +1070,10 @@ h4 {
   background-color: #FFFFFF;
 }
 
+@media only screen and (min-width: 700px) {
+  .slider {
+    width: 650px;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

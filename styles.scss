@@ -725,7 +725,7 @@ h4{
             -ms-transform: scale(1.1);
             -o-transform: scale(1.1);
 
-}
+        }
     }
 }
 @media only screen and (min-width: 1150px) {
@@ -1055,6 +1055,8 @@ h4{
     }
     &__img{
         width: 100%;
+        
+        
     }
     .arrow {
         display: inline-block;
@@ -1103,5 +1105,10 @@ h4{
     }
     .active{
         background-color: #FFFFFF;
+    }
+}
+@media only screen and (min-width: 700px){
+    .slider{
+        width: 650px;
     }
 }
