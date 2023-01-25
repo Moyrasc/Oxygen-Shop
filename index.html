@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,15 +16,16 @@
     <link href="/styles.css" rel="stylesheet" />
     <title>Oxygen Shop</title>
 </head>
+
 <body>
     <div class="percentage-scroller"></div>
     <header class="header-container">
         <div class="header">
             <h1 class="header__title">OXYGENShop</h1>
         </div>
-         <i class="fa-solid fa-bars fa-lg header__menu header_btn header_icon"></i>
-            <i class="fa-solid fa-xmark fa-lg header__menu hidden header_btn_close header_icon"></i>
-        
+        <i class="fa-solid fa-bars fa-lg header__menu header_btn header_icon"></i>
+        <i class="fa-solid fa-xmark fa-lg header__menu hidden header_btn_close header_icon"></i>
+
 
         <nav class="nav_links nav_links_hidden open-hide">
             <ul class="links">
@@ -114,10 +116,10 @@
         <section class="price-container" id="prices">
             <h2 class="price__title">Pricing</h2>
             <select class="select__pricing text">
-            <option value="usd">USD - $</option>
-            <option value="eur">EUR - €</option>
-            <option value="gbp">GBP - £</option>
-        </select>
+                <option value="usd">USD - $</option>
+                <option value="eur">EUR - €</option>
+                <option value="gbp">GBP - £</option>
+            </select>
             <div class="container-price">
                 <div class="price__section--red" id="red">
                     <div class="container">
@@ -264,15 +266,22 @@
             </div>
         </section>
         <div class="slider" id="slider">
-            <div class="slider__conatiner">
-                <img src="./img/dragon.jpg" alt="image-dragon" class="slider__img"/>
-                <img src="./img/orchids-pink.jpg" alt="image-orchids-pink" class="slider__img"/>
-                <img src="./img/rainbow-pencils.jpg" alt="image-color-pencils"class="slider__img"/>
-                <img src="./img/rose-yellow-pink.jpg" alt="image-yellow-rose" class="slider__img"/>
-                <img src="./img/soft-frosty-branches.jpg" alt="image-frosty-branches" class="slider__img"/>
+            <div class="slider__container">
+                <img src="./img/dragon.jpg" alt="image-dragon" class="slider__img" />
+                <img src="./img/orchids-pink.jpg" alt="image-orchids-pink" class="slider__img" />
+                <img src="./img/rainbow-pencils.jpg" alt="image-color-pencils" class="slider__img" />
+                <img src="./img/rose-yellow-pink.jpg" alt="image-yellow-rose" class="slider__img" />
+                <img src="./img/soft-frosty-branches.jpg" alt="image-frosty-branches" class="slider__img" />
             </div>
-            <button class="arrow_container  arrow_right"><i class="fa fa-3x fa-regular fa-chevron-right"></i></button>  
-            <button class="arrow_container  arrow_left"><i class="fa fa-3x fa-regular fa-chevron-left"></i></button>
+            <!-- <button class="arrow_container  arrow_left">
+                <i class="fa-solid fa-chevron-left fa-3x arrow-left"></i>
+            </button>
+            <button class="arrow_container  arrow_right">
+                <i class="fa-solid fa-chevron-right fa-3x"></i>
+            </button> -->
+            <div class="arrow arrow-right"></div>
+            <div class="arrow arrow-left"></div>
+            
             <div class="slider__circle_container">
                 <div class="slider__circle__group">
                     <button class="slider__circle  active"></button>
@@ -281,7 +290,7 @@
                     <button class="slider__circle"></button>
                     <button class="slider__circle"></button>
                 </div>
-            </div> 
+            </div>
         </div>
         <section class="contact_container" id="contact">
             <div class="header">
@@ -300,7 +309,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="form_container">
                 <form class="form">
                     <div>
@@ -337,20 +346,20 @@
     </main>
     <button id="btn-top"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
     <div class="modal">
-                <div class="modal__container">
-                    <p class="modal__close ">X</p>
-                    <h2 class="modal__title">Welcome to OXYGENShop</h2>
-                    <p class="modal__p">Subscribe to our newsletter!</p>
-                    <form class="modal__form">
-                        <label for="email" class="modal__label">Email: </label>
-                        <input class="text modal__input error" type="email"/>
-                        <p class="error_message_input error_message_email_modal">Introduzca un email válido</p>
-                    </form>
-                <div class="button__container">
-                    <button class="button submit modal__btn">Send</button>
+        <div class="modal__container">
+            <p class="modal__close ">X</p>
+            <h2 class="modal__title">Welcome to OXYGENShop</h2>
+            <p class="modal__p">Subscribe to our newsletter!</p>
+            <form class="modal__form">
+                <label for="email" class="modal__label">Email: </label>
+                <input class="text modal__input error" type="email" />
+                <p class="error_message_input error_message_email_modal">Introduzca un email válido</p>
+            </form>
+            <div class="button__container">
+                <button class="button submit modal__btn">Send</button>
             </div>
-                </div>
-            </div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer__title">
             <h1>OXYGENShop</h1>
@@ -363,4 +372,5 @@
     </footer>
     <script src="./Js/main.js"></script>
 </body>
+
 </html>
