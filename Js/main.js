@@ -186,3 +186,43 @@ const getCurrency = async (url, currency) => {
 }
 
 selectPricing.addEventListener("change", () => getCurrency(URL_EXCHANGE, selectPricing.value))
+
+//slider
+
+class Slider {
+    constructor(id){
+        this.slider = document.querySelector(`.${id}`);
+        this.sliderContainer = document.querySelector(`.${id}__container`);
+        this.images = this.slider.getElementsByClassName(`.${id}__img`)
+        this.showImage = 0
+        // this.activeShowImage = this.showImage[0]
+        this.imgLenght = this.sliderContainer.children.length;
+        this.circles = document.querySelector(`.${id}__circle__group`).children;
+        this.next = document.querySelector(`.${id} .arrow-right`)
+        this.prev = document.querySelector(`.${id} .arrow-left`)
+
+        this.changeImg();
+        this.automaticSlider(2000);
+    }
+    showMoveSlider(){
+        this.sliderContainer.style.transform = `translateX(-${this.showImage * this.slider.offsetWidth}px)`
+        Array.from(this.circles).forEach(circle =>circle.classList.remove('active'))
+        this.circles[this.showImage].classList.add('active')
+    }
+    nextImg(){
+        this.showImage = this.showImage >= this.imgLenght - 1 ? 0: this.showImage +1;
+        this.showMoveSlider()
+    }
+    prevImg(){
+        this.showImage = this.showImage<= 0 ? this.imgLenght -1 : this.showImage -1;
+        this.showMoveSlider()
+        }
+    changeImg(){
+        this.next.addEventListener('click',this.nextImg.bind(this))
+        this.prev.addEventListener('click', this.prevImg.bind(this))
+    }    
+    automaticSlider(timer){
+        setInterval(this.nextImg.bind(this), timer)
+    }
+}
+new Slider("slider")
