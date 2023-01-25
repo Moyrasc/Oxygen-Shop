@@ -945,6 +945,7 @@ h4 {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   background-color: #FFFFFF;
+  opacity: 0.8;
   position: relative;
   display: block;
   padding: 3%;
